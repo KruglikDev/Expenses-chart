@@ -1,17 +1,14 @@
 import data from './data.json' assert { type: "json" };
 
-const clonedArr = [...data];
-const maxNum = clonedArr.sort((a,b) => a.amount - b.amount).reverse()[0].amount;
-
 const list = document.querySelector('.chart');
+const currentDay = new Date().getDay();
 
-data.forEach(item => {
-    const max = item.amount === maxNum ? 'max' : '';
+data.forEach((item, index) => {
     const stick = document.createElement('div');
     stick.classList.add('chart__col');
 
     stick.innerHTML = `<div class="chart__amount">$${item.amount}</div>
-                        <div class="chart__value ${max}" style="height:${item.amount * 3}px"></div>
+                        <div class="chart__value ${index === currentDay ? 'max' : ''}" style="height:${item.amount * 3}px"></div>
                         <figcaption>${item.day}</figcaption>`;
     list.appendChild(stick);
 })

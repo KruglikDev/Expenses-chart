@@ -112,6 +112,10 @@ figcaption {
     background: var(--red-col);
 }
 
+.chart__value:hover {
+    filter: brightness(120%);
+}
+
 .chart__value.max {
     background: var(--cyan-col);
 }
