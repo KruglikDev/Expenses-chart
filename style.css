@@ -1,0 +1,136 @@
+:root {
+    --red-col: hsl(10, 79%, 65%);
+    --cyan-col: hsl(186, 34%, 60%);
+    --cream-col: hsl(27, 66%, 92%);
+    --peach-col: hsl(33, 100%, 98%);
+    --dbrown-col: hsl(25, 47%, 15%);
+    --mbrown-col: hsl(28, 10%, 53%);
+}
+
+/*Typography*/
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp(1rem, 3vw, 1.125rem);
+}
+
+.text {
+    color: var(--mbrown-col);
+}
+
+/*Global*/
+body {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-inline: 0.625rem;
+    background: var(--cream-col);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 1rem;
+    background: var(--red-col);
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--peach-col);
+}
+
+main {
+    padding: clamp(1.2rem, 5vw, 2rem);
+    border-radius: 1rem;
+    background: var(--peach-col);
+    color: var(--dbrown-col);
+}
+
+figcaption {
+    color: var(--mbrown-col);
+}
+
+.balance {
+    margin-bottom: .3rem;
+}
+
+.container {
+    min-width: 22.1875rem;
+}
+
+.chart {
+    display: flex;
+    margin-inline: 0;
+    justify-content: space-between;
+}
+
+.chart__amount {
+    padding: .4rem;
+    border-radius: .2rem;
+    color: var(--peach-col);
+    background: var(--dbrown-col);
+    margin-bottom: .3rem;
+    visibility: hidden;
+    font-size: clamp(.7rem, 2vw, 1rem);
+}
+
+.chart__amount.show {
+    visibility: visible;
+}
+
+.chart__col {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: end;
+}
+
+.chart__value {
+    border-radius: .2rem;
+    width: clamp(2rem, 6vw, 3rem);
+    align-self: center;
+    background: var(--red-col);
+}
+
+.chart__value.max {
+    background: var(--cyan-col);
+}
+
+/*Footer*/
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+    border-top: 2px solid var(--cream-col);
+}
+
+.percentage {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.total__amount {
+    font-size: clamp(2rem, 7vw, 3rem);
+}
