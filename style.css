@@ -106,8 +106,8 @@ figcaption {
 }
 
 .chart__value {
-    border-radius: .2rem;
-    width: clamp(2rem, 6vw, 3rem);
+    border-radius: .3rem;
+    width: clamp(2rem, 6vw, 2.8rem);
     align-self: center;
     background: var(--red-col);
 }
